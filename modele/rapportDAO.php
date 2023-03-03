@@ -5,7 +5,7 @@ include_once('connexionDAO.php');
 
 class rapportDAO{
     
-// FONCTION QUI PERMET DE CHARGER LE MEDECIN CONCERNE PAR UN PARPPORT   
+// FONCTION QUI PERMET DE CHARGER LE MEDECIN CONCERNE PAR UN RAPPORT   
     public static function chargerMedecinRapport($idRapport)
      {
         $connect = connexionDAO::connexionPDO();

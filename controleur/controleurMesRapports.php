@@ -14,13 +14,13 @@ include_once ("$racine/modele/familleDAO.php");
 
 //RECUPERATION DE L'IDENTIFIANT DU VISITEUR ET SON CHARGEMENT
   $identifiant = $_GET["id"];
-  $leVisiteur = visiteurDAO::getunVisiteur($identifiant);
+  $leVisiteur = visiteurDAO::getunVisiteur($identifiant); 
 
 // CHARGEMENT DES RAPPORTS DU VISITEUR  
   $mes_rapports = visiteurDAO::getLesRapportsVisiteur($identifiant);
   $mesRapports = visiteurDAO::getLesRapportsOrdreDatesVisiteur($identifiant);
 
-// RECUPPERATION DES DIFFERENTES DE SES RAPPORTS
+// RECUPPERATION DES DIFFERENTS RAPPORTS
     $datesRapports = array();
     for($i=0; $i<count($mesRapports); $i++){
         if(!in_array($mesRapports[$i]->getDateRapport(), $datesRapports)){

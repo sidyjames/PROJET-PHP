@@ -34,26 +34,6 @@ class medecinDAO{
         return $medecin;
      }
      
-// FONCTION QUI PERMET DE CHARGER UN MEDECIN A PARTIR DE SON DEBUT DE NOM
-public static function getMedecinByNom($nomMedecin){
-       $res = array();
-       $connect = connexionDAO::connexionPDO();
-        $request = $connect->prepare("select* from medecin where nom LIKE :nom ");
-                                          
-        $request->bindValue(':nom', $nomMedecin.'%', PDO::PARAM_STR);
-        $request->execute();
-         $ligne=$request->fetchAll();
-        foreach($ligne as $key => $value){
-            $medecins = new medecin($value['id'],$value['nom'],$value['prenom'],$value['adresse'],$value['tel'],$value['specialitecomplementaire'],$value['departement']);
-            $res[]=$medecins;
-        }
-        if ($res != null){
-             return $res;
-        }
-        else{
-            return null;
-        }
-     }
 
 
 // FONCTION QUI PERMET DE CHARGER LES RAPPORTS D'UN MEDECIN

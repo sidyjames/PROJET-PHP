@@ -13,6 +13,7 @@ class visiteur{
     private $DateEmbaucheVisiteur;
     private $TimespanVisiteur;
     private $TicketVisiteur;
+    
 
     public function __construct($unIdVisiteur,$unNomVisiteur,$unPrenomVisiteur,$unLoginVisiteur,$unMdpVisiteur,$uneAdresseVisiteur,$unCPVisiteur,$uneVilleVisiteur, $unedateEmbaucheVisiteur, $untimespanVisiteur, $unticketVisiteur ) {
         $this->IdVisiteur=$unIdVisiteur;

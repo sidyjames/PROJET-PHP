@@ -6,7 +6,6 @@ function controleurPrincipal($action) {
     $lesActions["accueilVisite"] = "controleurAccueil.php";
     $lesActions["controleurRapport"] = "controleurRapport.php";
     $lesActions["controleurMesRapports"] = "controleurMesRapports.php";
-    $lesActions["controleurRechercheMedecin"] = "controleurRechercheMedecin.php";
     $lesActions["controleurMedecin"] = "controleurMedecin.php";
     $lesActions["controleurProfil"] = "controleurProfil.php";
     $lesActions["controleurAjoutRapport"] = "controleurAjoutRapport.php";

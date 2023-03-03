@@ -1,4 +1,4 @@
-<?php
+j<?php
 
 include_once ("$racine/modele/medecin.php");
 include_once ("$racine/modele/medecinDAO.php");
@@ -136,30 +136,6 @@ elseif (isset($_POST["id_medecin"])&& isset($_POST["nomMedecin"])&& isset($_POST
     }
     
 
-// RECUPERATION DES DONNEES PERMETTANT DE MODIFIER LE PROFIL D'UN VISITEUR
-elseif (isset($_POST["idProfil"])&& isset($_POST["nomVisiteur"])&& isset($_POST["prenomVisiteur"]) && isset($_POST["adresseVisiteur"])
-        && isset($_POST["CP"]) && isset($_POST["ville"]) && isset($_POST["login"]) && isset($_POST["Mdp"]) && isset($_POST["MdpC"])
-        && isset($_POST["dateEmbauche"]) && isset($_POST["timeSpan"]) && isset($_POST["ticket"])){
-  
-        $idvisiteur= $_POST["idProfil"];
-        $nomVisiteur=$_POST["nomVisiteur"];
-        $prenomVisiteur=$_POST["prenomVisiteur"];
-        $adresseVisiteur=$_POST["adresseVisiteur"];
-        $cp=$_POST["CP"];
-        $ville=$_POST["ville"];
-        $login=$_POST["login"];
-        $Mdp=$_POST["Mdp"];
-        $MdpC=$_POST["MdpC"];
-        $dateEmbauche=$_POST["dateEmbauche"];
-        $timeSpan=$_POST["timeSpan"];
-        $ticket=$_POST["ticket"];
-     
-      
-        if($Mdp == $MdpC){
-            
-        // Modification de profil du visiteur    
-        $modifVisiteur = visiteurDAO::updateVisiteur($idvisiteur, $nomVisiteur, $prenomVisiteur, $adresseVisiteur, $cp, $ville, $login, $Mdp, $dateEmbauche, $timeSpan, $ticket);
-        
         // Chargement du visiteur
         $leVisiteur = visiteurDAO::getunVisiteur($idvisiteur);
         
